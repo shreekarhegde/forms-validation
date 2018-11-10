@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head><title> ticket master </title></head>
+    <body>
+        <h2> listing tickets </h2>
+        <p id="status"> fetching...</p>
+        <table border="1">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Priority</th>
+                <th>Message</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tickets">
+
+        </tbody>
+    </table>
+    <h2>Add ticket</h2>
+    <form id="addTicket">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" /> 
+        <span id="nameError"></span>
+        <br/>
+
+        <label>Department</label>
+        <select id="department" name="department">
+            <option value="">Select</option>
+            <option value="Technical">Technical</option>
+            <option value="Sales">Sales</option>
+            <option value="Hr">Hr</option>
+        </select>
+        <span id="departmentError"></span><br/>
+
+        <label>Employees</label>
+        <select id="employee" name="employee">
+        <option value="Anurag">Anurag</option>
+        <option value="Chenraj">Chenrj</option>
+        <option value="Deepak">Deepak</option>
+        <option value="Ein">Ein</option>
+        <option value="Farooq">Farooq</option>
+        <option value="Joseph">Joseph</option>
+        </select>
+        <br/>
+
+        <label>Priority</label>
+        <select id="priority" name="priority">
+            <option value="">Select</option>
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
+        </select>
+        <span id="priorityError"></span>
+      
+        <br/>
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea> <br/>
+        <span id="messageError"></span>
+
+        <input type="submit" value="create ticket"/>
+        <input type="reset" value="reset">
+
+    </form>
+        <script src="./js/axios.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/form.js"></script>
+    </body>
+</html>
